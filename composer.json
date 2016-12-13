@@ -1,0 +1,33 @@
+{
+	"name" : "hassanalisalem/laravel-default-profile-image",
+	"description" : "Laravel package to create default profile image using name of user.",
+	"type" : "laravel-library",
+	"authors" : [{
+			"name" : "Hassan Salem ",
+			"email" : "h.salem7788@gmail.com"
+		}
+	],
+	"minimum-stability": "dev",
+	"keywords" : [
+		"laravel default profile image"
+	],
+	"homepage" : "http://www.anacoder.net",
+	"license" : [
+		"MIT"
+	],
+	"require" : {
+		"php" : ">=5.4.0",
+		"intervention/image": "2.*"
+	},
+    "require-dev" : {
+    },
+	"autoload" : {
+		"psr-0" : {
+			"hassanalisalem\\Image" : "src/"
+		}
+	},
+	"support" : {
+		"source" : "",
+		"issues" : ""
+	}
+}
