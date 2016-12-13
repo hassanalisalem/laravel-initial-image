@@ -1,6 +1,6 @@
-# Laravel Default Profile Image
+# Laravel initial Image
 
-Laravel package to create default profile image using name of user.
+Laravel package to create default profile image using first two letters of a name.
 
 
 ## Installation
