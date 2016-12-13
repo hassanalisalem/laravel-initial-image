@@ -1,5 +1,5 @@
 {
-	"name" : "hassanalisalem/laravel-default-profile-image",
+	"name" : "hassanalisalem/laravel-initial-image",
 	"description" : "Laravel package to create default profile image using name of user.",
 	"type" : "laravel-library",
 	"authors" : [{
