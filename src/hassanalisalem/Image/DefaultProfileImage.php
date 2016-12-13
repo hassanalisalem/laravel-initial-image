@@ -15,7 +15,7 @@ class DefaultProfileImage
 	 * @param string $background_color
 	 * @param string $text_color
 	 * @param string $font_file
-	 * @return ImageManagerStatic
+	 * @return mixed
 	 * @throws Exception
 	 */
 	public static function create ($name = '', $size = 512, $background_color = '#666', $text_color = '#FFF', $font_file = '../../../font/OpenSans-Semibold.ttf')
@@ -38,11 +38,15 @@ class DefaultProfileImage
         }
 
 		$str = "";
+
 		$name_ascii = strtoupper(Str::ascii($name));
 
 		$words = preg_split("/[\s,_-]+/", $name_ascii);
-		if(count($words) >= 2) $str = $words[0][0].$words[1][0];
-		else $str = substr($name_ascii, 0, 2);
+
+		if(count($words) >= 2)
+			$str = $words[0][0].$words[1][0];
+		else
+			$str = substr($name_ascii, 0, 2);
 
 		$img = ImageManagerStatic::canvas($size, $size, $background_color)->text($str, $size / 2, $size / 2, function($font) use($size, $text_color, $font_file) {
 			$font->file($font_file);
@@ -53,6 +57,7 @@ class DefaultProfileImage
 		});
 		
 		$img->name = $str;
+		$img->size = $size;
 		return $img;
 		
 	}
