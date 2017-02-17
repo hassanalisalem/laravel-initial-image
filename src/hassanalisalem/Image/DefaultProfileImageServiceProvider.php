@@ -25,7 +25,7 @@ class DefaultProfileImageServiceProvider extends ServiceProvider
         $this->app->booting(function()
         {
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('DefaultProfileImage', 'A6digital\Image\Facades\DefaultProfileImage');
+            $loader->alias('DefaultProfileImage', 'hassanalisalem\Image\Facades\DefaultProfileImage');
         });
     }
 
